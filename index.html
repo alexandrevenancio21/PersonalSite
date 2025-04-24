@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="resources/final_profile.JPG" alt="Logo" class="sidebar-logo">
+            <h2>Alexandre Venâncio</h2>
+            
+            <!--
+            <button class="sidebar-button" onclick="goToHomepage()">Homepage</button>
+            <button class="sidebar-button" onclick="showAboutMe()">About me</button>
+            
+            -->
+
+            <button class="sidebar-button" onclick="showProjects()">Projects</button>
+
+            <div class="sidebar-footer">
+                <a href="https://www.linkedin.com/in/alexandre-ven%C3%A2ncio-8400191b6/" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.401 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H3.1v7.225h1.843zm-.921-8.21c.837 0 1.358-.554 1.358-1.248C5.38 3.554 4.86 3 4.023 3c-.837 0-1.358.554-1.358 1.248 0 .694.52 1.248 1.357 1.248zm4.908 8.21V9.359c0-.215.016-.43.08-.586.174-.43.571-.875 1.237-.875.872 0 1.22.66 1.22 1.63v4.866h1.843V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.19v.026h-.014a5.58 5.58 0 0 1 .014-.026V6.169H6.989c.024.694 0 7.225 0 7.225h1.841z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/alexandrevenancio21" target="_blank" rel="noopener noreferrer" class="github-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p></p>
+
+        </aside>
+        <main class="content" id="main-content">
+            <!--
+            <div id="homepage-content">
+                <h1>Bem-vindo à Homepage</h1>
+                <p>Esta é a página inicial do site. Explore as opções no menu lateral para saber mais!</p>
+            </div>
+
+            <div id="aboutme-content" class="hidden">
+                <h1>Sobre Mim</h1>
+                <p><strong>Nome:</strong> João Silva</p>
+                <p><strong>Email:</strong> joao@email.com</p>
+                <p><strong>Profissão:</strong> Desenvolvedor Web</p>
+                <p><strong>Hobbies:</strong> Programar, viajar, ouvir música</p>
+            </div>
+            -->
+            <!---->
+            <!-- <div id="projects-content" class="hidden"> -->
+            <div id="projects-content" class="">
+                <h1>My projects</h1>
+                <p>I only have university projects to show, I hope that my first professional project is with you :)</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <!-- Cards de projetos -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="resources/caderneta de cromos.jpeg" class="card-img-top" alt="Caderneta de Cromos">
+                            <div class="card-body">
+                                <h5 class="card-title">Sticker Album</h5>
+                                <div class="card-text-container">
+                                    <p class="card-text">This project is a digital version of a classic sticker album inspired on EURO 2024.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('details-sticker-album')">Details</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/alexandrevenancio21/OnlineStickerBook', '_blank')">Git</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Área de detalhes específica para o Sticker Album -->
+                        <div id="details-sticker-album" class="project-details hidden">
+                            
+                            <h2>Sticker Album Details</h2>
+                            <p>This project is an implementation of a website related to Euro 2024, which includes a virtual sticker collection. Additionally, the site features a store where users can buy sticker packs and a forum for exchanging ideas. The development of the site focused on inheritance between HTML pages, with the homepage as the main page and other pages like the store, forum, sticker album, and information derived from it. The website was built using the Django framework, and React was utilized for superuser functionalities.</p>
+                                Key features:
+                                <ul>
+                                    <li>Inheritance between HTML pages: The homepage serves as the parent page, with a common header and footer for the derived pages.</li>
+                                    <li>Login functionalities: Differentiation between regular users and superusers, with specific permissions for each type.</li>
+                                    <li>Interactivity on the homepage: Interactive banners that display game information when clicked.</li>
+                                    <li>Personal page: Allows users to change their profile picture, check and load balance, and view personal information.</li>
+                                    <li>Store: Provides sticker packs for purchase, with random generation of stickers.</li>
+                                    <li>Forum: Enables interaction between users through text messages, with posting and liking functionalities.</li>
+                                    <li>Sticker album: Exclusive to regular users, where they can view the stickers they have acquired.</li>
+                                </ul>
+                            <button onclick="toggleDetails('details-sticker-album')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="resources/sokoban.jpeg" class="card-img-top" alt="Sokoban">
+                            <div class="card-body">
+                                <h5 class="card-title">Sokoban</h5>
+                                <div class="card-text-container">
+                                    <p class="card-text">This is a Sokoban project and was my first approach to object-oriented programming.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('details-sokoban')">Details</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/alexandrevenancio21/Sokoban', '_blank')" >Git</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('gallery-sokoban')">Gallery</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Área de detalhes específica para o Sokoban -->
+                        <div id="details-sokoban" class="project-details hidden">
+                            <h2>Sokoban Details</h2>
+                            <p>This project is a Java implementation of Sokoban, a classic puzzle game where the player pushes boxes around in a warehouse, trying to get them to designated storage locations. The game logic includes handling player movements, collision detection, items and level progression.
+
+                                The project was developed with a focus on object-oriented principles, ensuring that the code is modular and easy to maintain.</p>
+                                Key features:
+                                <ul>
+                                    <li>Multiple levels with increasing difficulty</li>
+                                    <li>Keyboard controls for player movement</li>
+                                    <li>Collision detection to prevent invalid moves</li>
+                                    <li>Level reset and undo functionality</li>
+                                </ul>    
+                            <button onclick="toggleDetails('details-sokoban')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+
+                        <div id="gallery-sokoban" class="project-gallery hidden">
+                            <h2>Sokoban Gallery</h2>
+                            <div class="gallery-images">
+                                <img src="resources/sokobanImages/OOP2.png" alt="Sokoban Screenshot 1">
+                                <img src="resources/sokobanImages/OOP3.png" alt="Sokoban Screenshot 2">
+                                <img src="resources/sokobanImages/OOP4.png" alt="Sokoban Screenshot 3">
+                            </div>    
+                            <button onclick="toggleDetails('gallery-sokoban')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="resources/iscTorrent escuro.jpeg" class="card-img-top" alt="ISCT Torrent">
+                            <div class="card-body">
+                                <h5 class="card-title">ISCTorrent</h5>
+                                <div class="card-text-container">
+                                    <p class="card-text">This is the ISC Torrent project, an app to download music through torrents.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('details-isctorrent')">Details</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/alexandrevenancio21/ISCTorrent', '_blank')" >Git</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Área de detalhes específica para o ISCTorrent -->
+                        <div id="details-isctorrent" class="project-details hidden">
+                            <h2>ISCTorrent Details</h2>
+                            <p>This project is a Java implementation of IscTorrent, a distributed file-sharing system designed to download binary files (specifically sound files). The system operates in a peer-to-peer (P2P) network where multiple users can request files from each other or respond to requests by sending file blocks. The focus of the project is on concurrent and distributed programming, with the graphical interface of the user applications considered secondary.</p>
+                            Key features:
+                            <ul>
+                                <li>P2P Architecture: Nodes in the network exchange messages to search for or request file downloads without relying on a central server.</li>
+                                <li>Node Connections: Each node can directly communicate with known nodes, establishing connections actively or passively.</li>
+                                <li>File Search Protocol: Users can search for files by keywords, receiving a list of available files and the nodes that host them.</li>
+                                <li>File Download: Files are downloaded in blocks from multiple nodes simultaneously, managed by a threadpool approach.</li>
+                                <li>Thread Management: Each user corresponds to a thread, and download tasks are managed by a dedicated thread pool to handle multiple requests efficiently.</li>
+                                <li>Network Communication: Messages are exchanged over object channels for file search and download.
+                                <li>Hash Function: Each file has a SHA-256 hash value for identification.</li>
+                            </ul>
+                            <button onclick="toggleDetails('details-isctorrent')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="resources/sudoku.jpeg" class="card-img-top" alt="Sudoku">
+                            <div class="card-body">
+                                <h5 class="card-title">Sudoku Solver</h5>
+                                <div class="card-text-container">
+                                    <p class="card-text">This is the Sudoku Solver, a Prolog project for the purpose of AI learning.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('details-sudoku')">Details</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/alexandrevenancio21/SudokuSolver', '_blank')" >Git</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Área de detalhes específica para o Sudoku Solver -->
+                        <div id="details-sudoku" class="project-details hidden">
+                            <h2>Sudoku Solver Details</h2>
+                            <p>This project is a Prolog implementation of a Sudoku Solver, designed to solve Sudoku puzzles by filling in a 9x9 grid such that each row, column, and 3x3 subgrid contains the digits from 1 to 9 without repetition. The project focuses on artificial intelligence principles and aims to develop a solver that can handle partially filled Sudoku matrices, replacing empty spaces correctly according to the rules of the game. This project does not include a frontend and consists solely of solving Sudoku puzzles.</p>
+                            
+                            Key features:
+                            <ul>
+                                <li>Multiple Solutions: If a Sudoku puzzle has multiple solutions, the solver generates all possible solutions.</li>
+                                <li>Flexible Grid Sizes: The code can solve Sudoku puzzles of other sizes, as long as the number of rows and columns is a perfect square (e.g., 4x4, 9x9, 16x16, 25x25).</li>
+                            </ul>
+                            <button onclick="toggleDetails('details-sudoku')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+                    </div>
+                    <!-- Adicione mais cards aqui -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

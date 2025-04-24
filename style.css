@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin: 0 !important; /* Remove qualquer margem */
+    padding: 0 !important; /* Remove qualquer padding */
+    width: 100%; /* Garante que ocupe toda a largura */
+    max-width: 100% !important; /* Remove a largura máxima padrão do Bootstrap */
+    display: flex;
+    height: 100%; /* Garante que ocupe toda a altura da página */
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: space-between; /* Espaça os elementos para que o último fique no final */
+    width: 20%;
+    min-width: 150px;
+    height: 100vh; /* 100% da altura da viewport */
+    position: sticky; /* Fixa a sidebar enquanto o conteúdo rola */
+    top: 0; /* Garante que fique no topo */
+    background-color: #2c3e50;
+
+    color: white;
+    padding: 20px;
+}
+  
+  .content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 20px;
+    background-color: #edede8;
+    overflow-y: auto; /* Permite rolagem no conteúdo, se necessário */
+  }
+
+  .sidebar-logo {
+    width: 60%;           /* ou qualquer valor que prefiras */
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;     /* garante que a imagem preenche bem o círculo */
+    display: block;
+    margin: 0 auto 20px auto; /* centraliza a imagem e dá espaçamento abaixo */
+  }
+
+  .sidebar h2 {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px; /* Adiciona espaço entre o <h2> e os botões */
+
+  }
+
+  .sidebar-button {
+    margin-top: 5px; /* Reduzido para aproximar os botões */
+    padding: 10px 15px;
+    background-color: #2c3e50;
+    border-color: white;
+    color: white;
+    border: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .sidebar-button:first-of-type {
+    margin-top: 0; /* Remove a margem superior do primeiro botão */
+  }
+  
+  
+  .sidebar-button.active {
+    background-color: #0056b3; /* Cor de fundo (azul Bootstrap) */
+    color: white; /* Cor do texto */
+    border: 1px solid #0056b3; /* Borda mais escura */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .sidebar-footer {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-top: auto; /* Empurra o footer para o final da sidebar */
+    padding-top: 20px;
+}
+
+.sidebar-footer a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.sidebar-footer svg {
+    width: 25px; /* Tamanho dos ícones */
+    height: 25px;
+    fill: white; /* Cor padrão dos ícones */
+    transition: fill 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.sidebar-footer svg:hover {
+    fill: #0077b5; /* Cor ao passar o mouse (LinkedIn e GitHub) */
+}
+
+.card {
+  height: 400px; /* Altura fixa para todos os cards */
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+}
+
+.card-img-top {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do card */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+.card-body {
+  flex: 1; /* Faz o corpo do card ocupar o restante do espaço */
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo do corpo verticalmente */
+}
+
+.card-text-container {
+  flex: 1; /* Faz o contêiner de texto ocupar o espaço disponível */
+  overflow-y: auto; /* Adiciona scroll interno apenas ao texto */
+  margin-bottom: 10px; /* Espaçamento entre o texto e o footer */
+  max-height: calc(100% - 50px); /* Ajusta a altura para evitar sobreposição com o footer */
+  
+}
+
+.card-text {
+  overflow-y: auto;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between; /* Espaça os botões e o tempo */
+  align-items: center; /* Alinha os itens verticalmente */
+  padding-top: 10px;
+  border-top: 1px solid #ddd; /* Linha separadora opcional */
+}
+
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-details {
+  background-color: #f8f9fa;
+  border-top: 2px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0; /* Bordas arredondadas apenas no topo */
+  text-align: left;
+  position: fixed; /* Fixa o contêiner na parte inferior da página */
+  bottom: 0; /* Alinha o contêiner à parte inferior */
+  left: 20%; /* Move o contêiner para a direita, respeitando a largura da sidebar */
+  width: 80%; /* Faz o contêiner ocupar o restante da largura */
+  z-index: 10; /* Garante que o contêiner fique acima de outros elementos */
+}
+
+.project-details.hidden {
+  display: none;
+}
+
+#project-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#project-description {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-gallery {
+  background-color: #f8f9fa;
+  border-top: 2px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0; /* Bordas arredondadas apenas no topo */
+  text-align: left; /* Alinha o texto à esquerda */
+  position: fixed; /* Fixa o contêiner na parte inferior da página */
+  bottom: 0; /* Alinha o contêiner à parte inferior */
+  left: 20%; /* Move o contêiner para a direita, respeitando a largura da sidebar */
+  width: 80%; /* Faz o contêiner ocupar o restante da largura */
+  z-index: 10; /* Garante que o contêiner fique acima de outros elementos */
+}
+
+.project-gallery.hidden {
+  display: none;
+}
+
+.project-gallery .gallery-images {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+  gap: 10px; /* Espaçamento entre as imagens */
+  justify-content: center; /* Centraliza as imagens */
+}
+
+.project-gallery .gallery-images img {
+  max-width: 30%; /* Cada imagem ocupa até 30% da largura disponível */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+}
