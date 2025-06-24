@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <img src="resources/final_profile.JPG" alt="Logo" class="sidebar-logo">
+            <img src="resources/final_profile.jpeg" alt="Logo" class="sidebar-logo">
             <h2>Alexandre Venâncio</h2>
             
             <!--
@@ -92,6 +92,31 @@
                                     <li>Sticker album: Exclusive to regular users, where they can view the stickers they have acquired.</li>
                                 </ul>
                             <button onclick="toggleDetails('details-sticker-album')" class="btn btn-sm btn-outline-secondary">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="resources/geoOrganizer.jpeg" class="card-img-top" alt="Caderneta de Cromos">
+                            <div class="card-body">
+                                <h5 class="card-title">GeoOrganizer</h5>
+                                <div class="card-text-container">
+                                    <p class="card-text">TODO</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleDetails('details-GeoOrganizer')">Details</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://github.com/alexandrevenancio21/OnlineStickerBook', '_blank')">Git</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Área de detalhes específica para o Sticker Album -->
+                        <div id="details-GeoOrganizer" class="project-details hidden">
+                            
+                            <p>TODO</p>
+                            <button onclick="toggleDetails('details-GeoOrganizer')" class="btn btn-sm btn-outline-secondary">Close</button>
                         </div>
                     </div>
                     

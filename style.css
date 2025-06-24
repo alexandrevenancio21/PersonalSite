@@ -42,8 +42,7 @@
 
   .sidebar-logo {
     width: 60%;           /* ou qualquer valor que prefiras */
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+    border-radius: 20%;
     object-fit: cover;     /* garante que a imagem preenche bem o círculo */
     display: block;
     margin: 0 auto 20px auto; /* centraliza a imagem e dá espaçamento abaixo */
